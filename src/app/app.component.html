@@ -1,2 +1,5 @@
-<h1>{{ title }}</h1>
-<app-user-list></app-user-list>
+<main class="mx-auto items-center justify-center max-w-screen-lg flex-1 mt-10">
+  <h1>{{ title }}</h1>
+  <app-user-list (userSelected)="onUserSelected($event)"></app-user-list>
+  <app-user-details [user]="selectedUser"></app-user-details>
+</main>

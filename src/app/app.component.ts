@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { UserListComponent } from './user-list/user-list.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { User } from './user.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   standalone: true,
-  imports: [UserListComponent],
+  imports: [UserListComponent, UserDetailsComponent],
 })
 export class AppComponent implements OnInit {
   title = 'linting-formatting-practice';
+  selectedUser: User | null = null;
 
   constructor() {
     console.log('App component initialized');
@@ -22,8 +25,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  public doSomething(): void {
-    const y = 20;
-    console.log(y);
+  onUserSelected(user: User) {
+    this.selectedUser = user;
   }
 }
