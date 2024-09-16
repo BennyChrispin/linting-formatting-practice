@@ -1,6 +1,7 @@
 # LintingFormattingPractice
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+live [linting-formatting-practice-9j9zcqn5q.vercel.app]
 
 ## Development server
 
